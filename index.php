@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html lang="pt-br">
     <head>  
         <meta charset = "UTF-8">
@@ -6,7 +9,10 @@
     <body>
         <h1> Formulário de Contato </h1>
         <?php
-
+        if( isset( $_SESSION[ 'msg' ] ) ){
+            echo $_SESSION[ 'msg' ];
+            unset($_SESSION['msg']);
+        }
 
         ?>
         <form method = "post" action = "processar_cadastra_mensagem.php"> 
