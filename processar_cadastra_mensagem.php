@@ -20,7 +20,6 @@ if ( $enviar ){
     $insert_mensagem_contato->bindParam(':assunto',$assunto);
     $insert_mensagem_contato->bindParam(':mensagem',$mensagem);
 
-
     if( $insert_mensagem_contato->execute() ){
         $_SESSION ['msg'] = "<p style = 'color:green;'> Mensagem foi enviada com sucesso </p>";
         header("Location: index.php");
